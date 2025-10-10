@@ -17,3 +17,13 @@ a:visited { text-decoration: none; color:#5EFF00; }
 a:hover { text-decoration: none; color:#5EFF00; }
 a:focus { text-decoration: none; color:#5EFF00; }
 a:hover, a:active { text-decoration: none; color:#5EFF00 }
+    
+/* font size */
+    
+h1{
+ font-size : 7.5vw;
+}
+
+p{
+ font-size : 2vw;
+}
