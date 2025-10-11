@@ -5,37 +5,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SFW Art - Protected</title>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 5rem;
+      color: #ddd;
+      background-color: #2E424A;
+    }
+    h1 { color: #fff; }
+    form { display: inline-block; margin-top: 1rem; }
+  </style>
 </head>
 <body>
-  <h1>SFW Art — please verify</h1>
-  <p>Complete the CAPTCHA to view this gallery.</p>
+  <h1>SFW Art — Access Verification</h1>
+  <p>Please complete the CAPTCHA to continue.</p>
 
-  <!-- action はあなたのワーカーのエンドポイント（例） -->
   <form id="turnstile-form" action="https://defend-bot.plushiesdealer.workers.dev/" method="POST">
-    <!-- Turnstile widget: data-callback でトークン取得後にフォームを送る -->
+    <!-- Turnstile ウィジェット -->
     <div class="cf-turnstile"
          data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC"
          data-callback="onTurnstileSuccess"></div>
 
-    <!-- ワーカーの redirectMap キーと一致させる（**スラッシュ無し**） -->
     <input type="hidden" name="path_identifier" value="oldart" />
-
-    <!-- ボタンはユーザが明示的に押すために置いておくと親切 -->
-    <button type="submit">Verify & Open</button>
   </form>
 
   <script>
-    // Turnstileがトークンを取得したら自動でフォーム送信する（ネイティブ submit）
+    // Turnstile が成功したら自動でフォーム送信
     function onTurnstileSuccess(token) {
-      // widget により hidden input name=cf-turnstile-response が自動挿入されることがあるが、
-      // 明示的に追加しておきたい場合は以下を使ってもOK：
-      // const f = document.getElementById('turnstile-form');
-      // if(!f.querySelector('input[name="cf-turnstile-response"]')){
-      //   const i = document.createElement('input');
-      //   i.type='hidden'; i.name='cf-turnstile-response'; i.value=token;
-      //   f.appendChild(i);
-      // }
-      document.getElementById('turnstile-form').submit();
+      const form = document.getElementById('turnstile-form');
+      // 念のためトークンを hidden に追加（Turnstileが自動で挿入しない場合に備える）
+      if (!form.querySelector('input[name="cf-turnstile-response"]')) {
+        const i = document.createElement('input');
+        i.type = 'hidden';
+        i.name = 'cf-turnstile-response';
+        i.value = token;
+        form.appendChild(i);
+      }
+      form.submit(); // 🔹ユーザー操作なしで即送信
     }
   </script>
 </body>
