@@ -41,6 +41,7 @@ main {
     font-size: 14px;
     line-height: 1.2;
     text-align: left;
+    margin-top: 0;
 }
 
 .content {
