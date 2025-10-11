@@ -63,6 +63,8 @@ p {
     padding: 0;
     margin: 20px 0 0 0;
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .links li {
@@ -71,6 +73,10 @@ p {
 
 .links li:not(:last-child)::after {
     content: " / ";
+}
+
+.links li.break-line {
+    width: 100%;
 }
 
 a {
