@@ -17,6 +17,10 @@ body {
     width: 100%;
 }
 
+header {
+    margin-bottom: 40px;
+}
+
 .ascii-art pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre;
@@ -37,6 +41,9 @@ body {
     list-style: none;
     padding: 0;
     margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .links li {
@@ -46,6 +53,10 @@ body {
 a {
     text-decoration: none;
     color: #5EFF00;
+}
+
+section {
+    margin-bottom: 40px;
 }
 
 /* Media Queries */
@@ -64,6 +75,9 @@ a {
     }
     .content {
         text-align: center;
+    }
+    .links {
+        justify-content: center;
     }
 }
 
