@@ -34,16 +34,25 @@ async function handleRequest(request) {
     const outcome = await result.json();
 
     if (outcome.success) {
-      // CAPTCHA verification successful
+      console.log('Turnstile verification successful.'); // Log success
+      console.log('Received pathIdentifier:', pathIdentifier); // Log received pathIdentifier
+
       const finalRedirectUrl = redirectMap[pathIdentifier];
+      console.log('Determined finalRedirectUrl:', finalRedirectUrl); // Log determined redirect URL
+
       if (finalRedirectUrl) {
-        return Response.redirect(finalRedirectUrl, 302); // Redirect to the mapped URL
+        return new Response(null, {
+          status: 302,
+          headers: {
+            'Location': finalRedirectUrl,
+          },
+        });
       } else {
+        console.error('No valid redirect path identifier found in map for:', pathIdentifier); // Log if path not found
         return new Response('CAPTCHA verification successful! No valid redirect path identifier provided.', { status: 200 });
       }
     } else {
-      // CAPTCHA verification failed
-      console.log(outcome['error-codes']);
+      console.error('CAPTCHA verification failed. Error codes:', outcome['error-codes']); // Log error codes
       return new Response('CAPTCHA verification failed. Please try again.', { status: 403 });
     }
   }
