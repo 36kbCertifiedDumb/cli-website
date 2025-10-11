@@ -10,17 +10,15 @@ body {
     background-color: #2E424A; /* back ground */
     color: #5EFF00; /* font color */
     display: flex;
-    flex-direction: column; /* Added */
-    /* Removed justify-content: center; */
-    /* Removed align-items: center; */
-    min-height: 100vh;
-    text-align: center;
+    flex-direction: column;
+    min-height: 100vh; /* Keep min-height for overall page structure */
+    /* Removed text-align: center; */
 }
 
 .container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    /* Removed margin: 0 auto; */
 }
 
 header {
@@ -29,21 +27,21 @@ header {
 }
 
 main {
-    /* No padding-left needed */
+    flex-grow: 1; /* Allow main to take up remaining space */
+    overflow-y: auto; /* Enable scrolling within main if content overflows */
 }
 
 .ascii-art pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre;
-    /* Removed overflow-x: auto; */
     font-size: 14px;
     line-height: 1.2;
-    text-align: left; /* Added */
+    text-align: left;
 }
 
 .content {
     margin-top: 20px;
-    text-align: left; /* Added to left-align content within sections */
+    text-align: left;
 }
 
 .content p {
@@ -54,7 +52,7 @@ main {
     list-style: none;
     padding: 0;
     margin: 20px 0 0 0;
-    text-align: left; /* Added */
+    text-align: left;
 }
 
 .links li {
@@ -75,8 +73,8 @@ section {
     margin-bottom: 40px;
 }
 
-section h2 { /* Added */
-    text-align: left; /* Added */
+section h2 {
+    text-align: left;
 }
 
 section:target {
@@ -96,8 +94,7 @@ section:target {
 @media (max-width: 480px) {
     .ascii-art pre {
         transform-origin: top left;
-        transform: scale(0.5); /* Adjust scale as needed */
-        width: 200%; /* To make sure the scaled content fits */
-        overflow: hidden; /* Hide overflow after scaling */
+        transform: scale(0.3);
+        overflow: hidden;
     }
 }
