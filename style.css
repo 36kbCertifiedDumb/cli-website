@@ -48,7 +48,7 @@ main {
 }
 
 .content p {
-    margin: 5px 0 0 0; /* Modified to remove bottom margin */
+    margin: 0; /* Modified to remove all margins */
 }
 
 .links {
