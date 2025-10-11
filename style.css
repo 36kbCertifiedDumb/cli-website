@@ -1,6 +1,7 @@
 /* Global styles */
 html {
     scroll-behavior: auto;
+    scroll-padding-top: 0;
     /* Removed overflow: hidden; */ /* Re-enabled scrolling */
 }
 
