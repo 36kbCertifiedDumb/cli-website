@@ -1,44 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Old Art - Protected</title>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Old Art - Protected</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
-    <h1>Welcome to the Protected Old Art Section!</h1>
-    <p>Please complete the CAPTCHA to view the content.</p>
-    <form action="https://defend-bot.plushiesdealer.workers.dev/" method="POST" id="turnstile-form">
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC" data-callback="javascriptCallback"></div>
-        <input type="hidden" name="path_identifier" value="/oldart/">
-    </form>
-    <script>
-        function javascriptCallback(token) {
-            console.log("Turnstile token:", token);
-            const form = document.getElementById('turnstile-form');
-            const formData = new FormData();
-            formData.append('cf-turnstile-response', token);
-            formData.append('path_identifier', form.querySelector('input[name="path_identifier"]').value);
+  <h1>Old Art — please verify</h1>
+  <p>Complete the CAPTCHA to view this gallery.</p>
 
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                console.log("Worker response status:", response.status);
-                console.log("Worker response URL:", response.url);
-                if (!response.redirected) {
-                    console.error("Worker did not redirect. Status:", response.status);
-                    response.text().then(text => {
-                        console.error("Worker response body:", text);
-                    });
-                }
-            })
-            .catch(error => {
-                console.error("Network error during Turnstile verification:", error);
-            });
-        }
-    </script>
+  <!-- action はあなたのワーカーのエンドポイント（例） -->
+  <form id="turnstile-form" action="https://defend-bot.plushiesdealer.workers.dev/" method="POST">
+    <!-- Turnstile widget: data-callback でトークン取得後にフォームを送る -->
+    <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC"
+         data-callback="onTurnstileSuccess"></div>
+
+    <!-- ワーカーの redirectMap キーと一致させる（**スラッシュ無し**） -->
+    <input type="hidden" name="path_identifier" value="oldart" />
+
+    <!-- ボタンはユーザが明示的に押すために置いておくと親切 -->
+    <button type="submit">Verify & Open</button>
+  </form>
+
+  <script>
+    // Turnstileがトークンを取得したら自動でフォーム送信する（ネイティブ submit）
+    function onTurnstileSuccess(token) {
+      // widget により hidden input name=cf-turnstile-response が自動挿入されることがあるが、
+      // 明示的に追加しておきたい場合は以下を使ってもOK：
+      // const f = document.getElementById('turnstile-form');
+      // if(!f.querySelector('input[name="cf-turnstile-response"]')){
+      //   const i = document.createElement('input');
+      //   i.type='hidden'; i.name='cf-turnstile-response'; i.value=token;
+      //   f.appendChild(i);
+      // }
+      document.getElementById('turnstile-form').submit();
+    }
+  </script>
 </body>
 </html>
