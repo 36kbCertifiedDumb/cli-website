@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Keep min-height for overall page structure */
+    line-height: 1.4;
     /* Removed text-align: center; */
     /* Removed overflow: hidden; */ /* Re-enabled scrolling */
 }
