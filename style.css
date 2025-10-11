@@ -37,6 +37,7 @@ main {
     /* Removed overflow-x: auto; */
     font-size: 14px;
     line-height: 1.2;
+    text-align: left; /* Added */
 }
 
 .content {
