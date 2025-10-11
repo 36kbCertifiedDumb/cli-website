@@ -5,7 +5,8 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
   if (request.method === 'POST') {
     const formData = await request.formData();
-    const token = formData.get('cf-turnstile-response'); // The name of the Turnstile token field
+    const token = formData.get('cf-turnstile-response');
+    const redirectUrl = formData.get('redirect_url'); // Get the redirect URL from the form data
 
     const SECRET_KEY = 'YOUR_TURNSTILE_SECRET_KEY'; // Replace with your Turnstile secret key
 
@@ -26,8 +27,11 @@ async function handleRequest(request) {
 
     if (outcome.success) {
       // CAPTCHA verification successful
-      // You can now serve the protected content or redirect the user
-      return new Response('CAPTCHA verification successful! Access granted.', { status: 200 });
+      if (redirectUrl) {
+        return Response.redirect(redirectUrl, 302); // Redirect to the specified URL
+      } else {
+        return new Response('CAPTCHA verification successful! No redirect URL provided.', { status: 200 });
+      }
     } else {
       // CAPTCHA verification failed
       console.log(outcome['error-codes']);
