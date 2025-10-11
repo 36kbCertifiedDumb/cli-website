@@ -19,6 +19,7 @@ body {
 .container {
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
 
 header {
@@ -32,7 +33,7 @@ main {
 .ascii-art pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre;
-    overflow-x: auto; /* Re-introducing scroll for now, will address it later */
+    /* Removed overflow-x: auto; */
     font-size: 14px;
     line-height: 1.2;
 }
@@ -85,7 +86,9 @@ section:target {
 /* For mobile phones */
 @media (max-width: 480px) {
     .ascii-art pre {
-        font-size: 7px; /* even smaller */
-        overflow-x: hidden;
+        transform-origin: top left;
+        transform: scale(0.5); /* Adjust scale as needed */
+        width: 200%; /* To make sure the scaled content fits */
+        overflow: hidden; /* Hide overflow after scaling */
     }
 }
