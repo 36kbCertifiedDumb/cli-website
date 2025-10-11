@@ -26,11 +26,12 @@ body {
 header {
     margin-bottom: 40px;
     padding-top: 0px; /* Reduced padding to the top of the header */
+    flex-shrink: 0; /* Added to prevent header from shrinking */
 }
 
 main {
     flex-grow: 1; /* Allow main to take up remaining space */
-    /* Removed overflow-y: auto; */ /* Removed as body will handle overflow */
+    overflow-y: auto; /* Re-added to enable scrolling within main if content overflows */
 }
 
 .ascii-art pre {
@@ -96,7 +97,7 @@ section:target {
 @media (max-width: 480px) {
     .ascii-art pre {
         transform-origin: top left;
-        transform: scale(0.3);
+        transform: scale(0.7); /* Adjusted scale */
         overflow: hidden;
     }
 }
