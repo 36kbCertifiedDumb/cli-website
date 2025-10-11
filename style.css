@@ -5,9 +5,6 @@ body {
     font-family: "Courier New", Courier, monospace;
     background-color: #2E424A; /* back ground */
     color: #5EFF00; /* font color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     text-align: left;
 }
@@ -15,10 +12,19 @@ body {
 .container {
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
 
 header {
-    margin-bottom: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 300px; /* Adjust as needed */
+    z-index: 1000;
+}
+
+main {
+    padding-left: 340px; /* Adjust to be wider than header width */
 }
 
 .ascii-art pre {
@@ -42,12 +48,12 @@ header {
     padding: 0;
     margin: 20px 0 0 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .links li {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 a {
@@ -68,33 +74,26 @@ section:target {
 
 /* For tablets */
 @media (max-width: 768px) {
-    body {
-        padding: 15px;
+    header {
+        position: static;
+        width: auto;
+        margin-bottom: 20px;
     }
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .ascii-art pre {
-        font-size: 12px;
-    }
-    .content {
-        text-align: center;
+    main {
+        padding-left: 0;
     }
     .links {
+        flex-direction: row;
         justify-content: center;
+        gap: 15px;
     }
 }
 
 /* For mobile phones */
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    .ascii-art pre {
-        font-size: 10px;
-    }
-    .content {
-        text-align: center;
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
