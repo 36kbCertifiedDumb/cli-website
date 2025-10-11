@@ -9,34 +9,32 @@ body {
     font-family: "Courier New", Courier, monospace;
     background-color: #2E424A; /* back ground */
     color: #5EFF00; /* font color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    text-align: left;
+    text-align: center;
 }
 
 .container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
 }
 
 header {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 300px; /* Adjust as needed */
-    z-index: 1000;
+    margin-bottom: 40px;
 }
 
 main {
-    padding-left: 340px; /* Adjust to be wider than header width */
+    /* No padding-left needed */
 }
 
 .ascii-art pre {
     font-family: "Courier New", Courier, monospace;
     white-space: pre;
+    overflow-x: auto; /* Re-introducing scroll for now, will address it later */
     font-size: 14px;
     line-height: 1.2;
-    overflow-x: hidden;
 }
 
 .content {
@@ -67,29 +65,27 @@ a {
 }
 
 section {
+    display: none;
     margin-bottom: 40px;
+}
+
+section:target {
+    display: block;
 }
 
 /* Media Queries */
 
 /* For tablets */
 @media (max-width: 768px) {
-    header {
-        position: static;
-        width: auto;
-        margin-bottom: 20px;
-    }
-    main {
-        padding-left: 0;
-    }
-    .links {
-        text-align: center;
+    .ascii-art pre {
+        font-size: 12px;
     }
 }
 
 /* For mobile phones */
 @media (max-width: 480px) {
     .ascii-art pre {
-        font-size: 8px;
+        font-size: 7px; /* even smaller */
+        overflow-x: hidden;
     }
 }
