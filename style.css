@@ -68,20 +68,27 @@ p {
 }
 
 .links li {
-    display: inline;
+    /* Removed display: inline; */
 }
 
 .links li:not(:last-child)::after {
+    /* Removed content: " / "; */
+}
+
+.links li::before {
     content: " / ";
 }
 
-.links li.break-line {
-    width: 100%;
+.links li:first-child::before {
+    content: "";
+}
+
+.links li:last-child::after {
+    content: " / ";
 }
 
 a {
     text-decoration: underline; /* Added underline */
-    color: #5EFF00;
 }
 
 section {
