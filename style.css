@@ -23,7 +23,7 @@ body {
 
 header {
     margin-bottom: 40px;
-    padding-top: 20px; /* Added padding to the top of the header */
+    padding-top: 0px; /* Reduced padding to the top of the header */
 }
 
 main {
