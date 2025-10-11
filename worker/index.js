@@ -6,9 +6,17 @@ async function handleRequest(request) {
   if (request.method === 'POST') {
     const formData = await request.formData();
     const token = formData.get('cf-turnstile-response');
-    const redirectUrl = formData.get('redirect_url'); // Get the redirect URL from the form data
+    const pathIdentifier = formData.get('path_identifier'); // Get the path identifier from the form data
 
     const SECRET_KEY = 'YOUR_TURNSTILE_SECRET_KEY'; // Replace with your Turnstile secret key
+
+    // Define the mapping of path identifiers to actual redirect URLs
+    const redirectMap = {
+      '/sfwart/': 'https://gallery.yueplush.com/share/aCzBqUgJiEh8rbjCdR8LFsXaiR01gCYI2VkcFhYI6utzqiZfvPuwMFcB0An7-qvlgaw',
+      '/suggestiveart/': 'https://gallery.yueplush.com/share/QELUgJIyrmi8V_iuGfmU2_y4sWEHst_62GhPVNGERDheWObyYqvyl34LotmZ-Imgv8Q',
+      '/oldart/': 'https://gallery.yueplush.com/share/dsSCzu2fgAVI6xopCxbIWU13dOyjMQdTjZE-yCQcyEZOi0S0w_HhOSiwRXDh0GwqwiI',
+      // Add other mappings as needed
+    };
 
     let ip = request.headers.get('CF-Connecting-IP');
 
@@ -27,10 +35,11 @@ async function handleRequest(request) {
 
     if (outcome.success) {
       // CAPTCHA verification successful
-      if (redirectUrl) {
-        return Response.redirect(redirectUrl, 302); // Redirect to the specified URL
+      const finalRedirectUrl = redirectMap[pathIdentifier];
+      if (finalRedirectUrl) {
+        return Response.redirect(finalRedirectUrl, 302); // Redirect to the mapped URL
       } else {
-        return new Response('CAPTCHA verification successful! No redirect URL provided.', { status: 200 });
+        return new Response('CAPTCHA verification successful! No valid redirect path identifier provided.', { status: 200 });
       }
     } else {
       // CAPTCHA verification failed

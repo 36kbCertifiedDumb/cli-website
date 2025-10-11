@@ -11,36 +11,28 @@
     <p>Please complete the CAPTCHA to view the content.</p>
     <form action="YOUR_WORKER_URL" method="POST" id="turnstile-form">
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC" data-callback="javascriptCallback"></div>
-        <input type="hidden" name="redirect_url" value="https://gallery.yueplush.com/share/dsSCzu2fgAVI6xopCxbIWU13dOyjMQdTjZE-yCQcyEZOi0S0w_HhOSiwRXDh0GwqwiI">
+        <input type="hidden" name="path_identifier" value="/oldart/">
     </form>
     <script>
         function javascriptCallback(token) {
             console.log("Turnstile token:", token);
             const form = document.getElementById('turnstile-form');
-            const redirectUrlInput = form.querySelector('input[name="redirect_url"]');
-            if (redirectUrlInput) {
-                const formData = new FormData();
-                formData.append('cf-turnstile-response', token);
-                formData.append('redirect_url', redirectUrlInput.value);
+            const formData = new FormData();
+            formData.append('cf-turnstile-response', token);
+            formData.append('path_identifier', form.querySelector('input[name="path_identifier"]').value);
 
-                fetch(form.action, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    // The worker is expected to send a redirect response (302)
-                    // The browser will automatically follow the redirect.
-                    // If the worker sends a non-redirect response, handle it here.
-                    if (!response.redirected) {
-                        console.error("Worker did not redirect. Status:", response.status);
-                        // Optionally, display an error message to the user
-                    }
-                })
-                .catch(error => {
-                    console.error("Network error during Turnstile verification:", error);
-                    // Optionally, display an error message to the user
-                });
-            }
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.redirected) {
+                    console.error("Worker did not redirect. Status:", response.status);
+                }
+            })
+            .catch(error => {
+                console.error("Network error during Turnstile verification:", error);
+            });
         }
     </script>
 </body>
