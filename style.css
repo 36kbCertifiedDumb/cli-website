@@ -48,7 +48,7 @@ main {
 }
 
 .content p {
-    margin: 5px 0;
+    margin: 5px 0 0 0; /* Modified to remove bottom margin */
 }
 
 .links {
@@ -97,7 +97,7 @@ section:target {
 @media (max-width: 480px) {
     .ascii-art pre {
         transform-origin: top left;
-        transform: scale(0.7); /* Adjusted scale */
+        transform: scale(0.7);
         overflow: hidden;
     }
 }
