@@ -26,8 +26,13 @@
                 body: formData
             })
             .then(response => {
+                console.log("Worker response status:", response.status);
+                console.log("Worker response URL:", response.url);
                 if (!response.redirected) {
                     console.error("Worker did not redirect. Status:", response.status);
+                    response.text().then(text => {
+                        console.error("Worker response body:", text);
+                    });
                 }
             })
             .catch(error => {
