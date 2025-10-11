@@ -27,7 +27,8 @@
          data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC"
          data-callback="onTurnstileSuccess"></div>
 
-    <input type="hidden" name="path_identifier" value="oldart" />
+    <!-- ✅ path_identifier を正しいディレクトリに変更 -->
+    <input type="hidden" name="path_identifier" value="/sfwart/" />
   </form>
 
   <script>
@@ -42,7 +43,9 @@
         i.value = token;
         form.appendChild(i);
       }
-      form.submit(); // 🔹ユーザー操作なしで即送信
+
+      // ✅ 「Verify & Open」ボタンなし → 自動送信で即リダイレクト
+      form.submit();
     }
   </script>
 </body>
