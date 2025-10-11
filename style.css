@@ -56,7 +56,12 @@ a {
 }
 
 section {
+    display: none;
     margin-bottom: 40px;
+}
+
+section:target {
+    display: block;
 }
 
 /* Media Queries */
