@@ -102,6 +102,7 @@ section:target {
 
 /* For PC */
 @media (min-width: 769px) {
+    html,
     body {
         overflow: hidden;
     }
