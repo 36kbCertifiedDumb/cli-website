@@ -1,6 +1,6 @@
 /* Global styles */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     /* Removed overflow: hidden; */ /* Re-enabled scrolling */
 }
 
