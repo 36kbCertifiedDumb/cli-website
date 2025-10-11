@@ -89,6 +89,11 @@ p {
 
 a {
     text-decoration: underline; /* Added underline */
+    color: #5EFF00;
+}
+
+a:visited {
+    color: #5EFF00;
 }
 
 section {
