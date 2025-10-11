@@ -1,29 +1,65 @@
 /* Global styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #2E424A; /* back ground */
-    color: #5EFF00; /* font color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-
-/* Each state */
-
-a:visited { text-decoration: none; color:#5EFF00; }
-a:hover { text-decoration: none; color:#5EFF00; }
-a:focus { text-decoration: none; color:#5EFF00; }
-a:hover, a:active { text-decoration: none; color:#5EFF00 }
-    
-/* font size */
-    
-h1{
- font-size : 5.5vw;
+:root{
+  --bg: #2E424A;
+  --neon: #5EFF00;
 }
 
-p{
- font-size : 2vw;
+/* Reset & layout */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--neon);
+  font-family: Arial, sans-serif;
+}
+
+/* Center page content */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ASCII block: keep whitespace and monospace for art */
+.ascii-block pre {
+  white-space: pre;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;        /* Adjust to taste for ASCII size */
+  line-height: 1.05;
+  margin: 0;
+  max-width: 90ch;         /* avoid extremely wide lines on large screens */
+  overflow-x: auto;
+  -webkit-font-smoothing: antialiased;
+  background: transparent;
+}
+
+/* Links inside the ASCII pre (keeps neon color but removes underline) */
+.ascii-block a {
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Accessible focus styles for keyboard users */
+.ascii-block a:focus {
+  outline: 2px dashed var(--neon);
+  outline-offset: 4px;
+}
+
+/* Responsive typography for other text (if needed later) */
+h1 { font-size: 5.5vw; margin: 0; }
+p  { font-size: 2vw; margin: 0; }
+
+/* Utility: hide visually but keep for screen readers */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
