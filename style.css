@@ -10,8 +10,9 @@ body {
     background-color: #2E424A; /* back ground */
     color: #5EFF00; /* font color */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Added */
+    /* Removed justify-content: center; */
+    /* Removed align-items: center; */
     min-height: 100vh;
     text-align: center;
 }
