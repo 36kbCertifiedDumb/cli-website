@@ -1,104 +1,13 @@
-/* --- カラーパレット --- */
-:root{
-  --bg: #2E424A;
-  --neon: #5EFF00;
-  --max-width: 1100px;
-}
-
-/* --- リセット & 基本 --- */
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; padding: 0; background: var(--bg); color: var(--neon); font-family: Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: var(--neon); text-decoration: none; }
-a:focus { outline: 2px dashed var(--neon); outline-offset: 4px; }
-
-/* --- ページ中央レイアウト --- */
-.wrap {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-/* ラッパー：横並び（デスクトップ） */
-.ascii-wrapper {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  max-width: var(--max-width);
-  width: 100%;
-}
-
-/* ASCII（左） */
-.ascii {
-  flex: 0 0 auto;
-  /* 横幅が大きくなりすぎないように制限 */
-  max-width: 60ch;
-  width: min(60ch, 45%);
-}
-
-/* ASCII 内の <pre> は等幅フォントで固定表示。
-   フォントサイズは clamp() でレスポンシブ調整（小さい画面で小さくなる） */
-.ascii pre {
-  margin: 0;
-  white-space: pre;
-  font-family: "Courier New", Courier, monospace;
-  font-size: clamp(0.7rem, 1.1vw + 0.3rem, 1.25rem);
-  line-height: 1;
-  overflow-x: auto;
-  background: transparent;
-  padding: 0;
-}
-
-/* プロフィール（右） */
-.profile {
-  flex: 1 1 50%;
-  text-align: left;
-  font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1rem);
-  line-height: 1.4;
-}
-
-/* リンク群（インラインで並べる） */
-nav.links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 0.75rem;
-}
-nav.links a {
-  padding: 0.35rem 0.6rem;
-  border-radius: 8px;
-  background: rgba(94,255,0,0.06); /* subtle neon highlight */
-  font-weight: 600;
-}
-
-/* 視覚的に隠すけどスクリーンリーダーには残す見出し */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
-/* -------------------
-   スマホ専用：幅600px以下
-   - 縦並びに切替
-   - ASCII を常に上に（orderで確実に配置）
-   - テキストは下に
-   - ASCII は幅いっぱいに広げて中央寄せ
-   ------------------- */
-@media (max-width: 600px) {
-  .ascii-wrapper {
-    flex-direction: column;
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2E424A; /* back ground */
+    color: #5EFF00; /* font color */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-  }
-
-  /* ASCII を上に来させる（orderで確実に） */
-  .ascii { order: -1; width: 100%; max-width: 100%; }
-  .ascii pre { font-size: clamp(0.55rem, 2.8vw, 1rem); text-align: center; }
-
-  .profile { order: 0; width: 100%; text-align: center; }
-  nav.links { justify-content: center; }
-  nav.links a { white-space: nowrap; }
+    height: 100vh;
+    text-align: center;
 }
