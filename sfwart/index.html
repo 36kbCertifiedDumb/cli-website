@@ -10,16 +10,38 @@
 <body>
     <h1>Welcome to the Protected Gallery!</h1>
     <p>Please complete the CAPTCHA to view the content.</p>
-    <form action="/your-backend-endpoint" method="POST">
+    <form action="YOUR_WORKER_URL" method="POST" id="turnstile-form">
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC" data-callback="javascriptCallback"></div>
         <input type="hidden" name="redirect_url" value="https://gallery.yueplush.com/share/aCzBqUgJiEh8rbjCdR8LFsXaiR01gCYI2VkcFhYI6utzqiZfvPuwMFcB0An7-qvlgaw">
-        <input type="submit" value="Submit">
     </form>
     <script>
         function javascriptCallback(token) {
             console.log("Turnstile token:", token);
-            // Here you would typically submit the form or send the token to your backend for verification.
-            // For a static site, this token would need to be sent to a serverless function or similar for verification.
+            const form = document.getElementById('turnstile-form');
+            const redirectUrlInput = form.querySelector('input[name="redirect_url"]');
+            if (redirectUrlInput) {
+                const formData = new FormData();
+                formData.append('cf-turnstile-response', token);
+                formData.append('redirect_url', redirectUrlInput.value);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    // The worker is expected to send a redirect response (302)
+                    // The browser will automatically follow the redirect.
+                    // If the worker sends a non-redirect response, handle it here.
+                    if (!response.redirected) {
+                        console.error("Worker did not redirect. Status:", response.status);
+                        // Optionally, display an error message to the user
+                    }
+                })
+                .catch(error => {
+                    console.error("Network error during Turnstile verification:", error);
+                    // Optionally, display an error message to the user
+                });
+            }
         }
     </script>
 </body>
