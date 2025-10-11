@@ -52,6 +52,10 @@ main {
     margin: 0; /* Modified to remove all margins */
 }
 
+p {
+    margin: 0;
+}
+
 .links {
     list-style: none;
     padding: 0;
