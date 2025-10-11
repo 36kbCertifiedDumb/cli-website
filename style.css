@@ -99,6 +99,13 @@ section:target {
     }
 }
 
+/* For PC */
+@media (min-width: 769px) {
+    body {
+        overflow: hidden;
+    }
+}
+
 /* For mobile phones */
 @media (max-width: 480px) {
     .ascii-art pre {
