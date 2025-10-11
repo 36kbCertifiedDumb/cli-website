@@ -76,7 +76,7 @@ p {
 }
 
 .links li::before {
-    content: " / ";
+    content: "";
 }
 
 .links li:first-child::before {
@@ -84,7 +84,7 @@ p {
 }
 
 .links li:last-child::after {
-    content: " / ";
+    content: "";
 }
 
 a {
