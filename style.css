@@ -97,7 +97,7 @@ section:target {
 @media (max-width: 480px) {
     .ascii-art pre {
         transform-origin: top left;
-        transform: scale(0.7);
+        transform: scale(0.9); /* Adjusted scale */
         overflow: hidden;
     }
 }
