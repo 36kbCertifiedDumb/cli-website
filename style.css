@@ -10,4 +10,10 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-}
+
+/* Each state */
+
+a:visited { text-decoration: none; color:#5EFF00; }
+a:hover { text-decoration: none; color:#5EFF00; }
+a:focus { text-decoration: none; color:#5EFF00; }
+a:hover, a:active { text-decoration: none; color:#5EFF00 }
