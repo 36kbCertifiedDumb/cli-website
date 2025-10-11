@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Protected</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <h1>Welcome to the Protected Gallery!</h1>
+    <p>Please complete the CAPTCHA to view the content.</p>
+    <form action="/your-backend-endpoint" method="POST">
+        <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY" data-callback="javascriptCallback"></div>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function javascriptCallback(token) {
+            console.log("Turnstile token:", token);
+            // Here you would typically submit the form or send the token to your backend for verification.
+            // For a static site, this token would need to be sent to a serverless function or similar for verification.
+        }
+    </script>
+</body>
+</html>
