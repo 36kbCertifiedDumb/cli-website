@@ -68,7 +68,7 @@ p {
 }
 
 .links li {
-    /* Removed display: inline; */
+    margin-right: 1em;
 }
 
 .links li:not(:last-child)::after {
