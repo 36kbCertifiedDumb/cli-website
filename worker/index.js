@@ -3,60 +3,121 @@ addEventListener('fetch', event => {
 });
 
 async function handleRequest(request) {
-  if (request.method === 'POST') {
+  try {
+    if (request.method !== 'POST') {
+      return new Response('This endpoint expects POST with Turnstile token.', { status: 200 });
+    }
+
+    // parse form body
     const formData = await request.formData();
     const token = formData.get('cf-turnstile-response');
-    const pathIdentifier = formData.get('path_identifier'); // Get the path identifier from the form data
+    const pathIdentifierRaw = formData.get('path_identifier') || '';
 
-    const SECRET_KEY = 'YOUR_TURNSTILE_SECRET_KEY'; // Replace with your Turnstile secret key
+    if (!token) {
+      console.error('No Turnstile token in request.');
+      return new Response('Missing Turnstile token.', { status: 400 });
+    }
 
-    // Define the mapping of path identifiers to actual redirect URLs
+    // SECRET should be configured as a worker secret binding named TURNSTILE_SECRET
+    const SECRET_KEY = TURNSTILE_SECRET;
+    if (!SECRET_KEY) {
+      console.error('TURNSTILE_SECRET is not configured in worker bindings.');
+      return new Response('Server configuration error.', { status: 500 });
+    }
+
+    // normalize incoming path identifier: trim, lowercase, strip leading/trailing slashes
+    const raw = pathIdentifierRaw.toString();
+    const key = raw.trim().toLowerCase().replace(/^\/|\/$/g, ''); // e.g. "/sfwart/" -> "sfwart"
+    console.log('Received path_identifier raw:', raw, 'normalized:', key);
+
+    // canonical redirect map (canonical keys)
     const redirectMap = {
-      '/sfwart/': 'https://gallery.yueplush.com/share/aCzBqUgJiEh8rbjCdR8LFsXaiR01gCYI2VkcFhYI6utzqiZfvPuwMFcB0An7-qvlgaw',
-      '/suggestiveart/': 'https://gallery.yueplush.com/share/QELUgJIyrmi8V_iuGfmU2_y4sWEHst_62GhPVNGERDheWObyYqvyl34LotmZ-Imgv8Q',
-      '/oldart/': 'https://gallery.yueplush.com/share/dsSCzu2fgAVI6xopCxbIWU13dOyjMQdTjZE-yCQcyEZOi0S0w_HhOSiwRXDh0GwqwiI',
-      // Add other mappings as needed
+      'sfwart': 'https://gallery.yueplush.com/share/aCzBqUgJiEh8rbjCdR8LFsXaiR01gCYI2VkcFhYI6utzqiZfvPuwMFcB0An7-qvlgaw',
+      'suggestive': 'https://gallery.yueplush.com/share/QELUgJIyrmi8V_iuGfmU2_y4sWEHst_62GhPVNGERDheWObyYqvyl34LotmZ-Imgv8Q',
+      'oldart': 'https://gallery.yueplush.com/share/dsSCzu2fgAVI6xopCxbIWU13dOyjMQdTjZE-yCQcyEZOi0S0w_HhOSiwRXDh0GwqwiI',
     };
 
-    let ip = request.headers.get('CF-Connecting-IP');
+    // alias map to absorb common typos / alternative names
+    const aliasMap = {
+      'suggesitve': 'suggestive',
+      'suggesitveart': 'suggestive',
+      'suggestiveart': 'suggestive',
+      'sfw': 'sfwart',
+      'sfw-art': 'sfwart',
+    };
 
-    let formDataVerify = new FormData();
-    formDataVerify.append('secret', SECRET_KEY);
-    formDataVerify.append('response', token);
-    formDataVerify.append('remoteip', ip);
+    // determine final redirect URL
+    let finalRedirectUrl = redirectMap[key];
+    if (!finalRedirectUrl && aliasMap[key]) {
+      const canonical = aliasMap[key];
+      finalRedirectUrl = redirectMap[canonical];
+      console.log('Used alias mapping:', key, '->', canonical);
+    }
 
-    const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-    const result = await fetch(url, {
-      body: formDataVerify,
+    // verify with Cloudflare Turnstile - use URLSearchParams (x-www-form-urlencoded)
+    const verifyBody = new URLSearchParams();
+    verifyBody.append('secret', SECRET_KEY);
+    verifyBody.append('response', token);
+
+    // optional: attach remoteip if available
+    const ip = request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || '';
+    if (ip) verifyBody.append('remoteip', ip);
+
+    const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
+      body: verifyBody,
     });
 
-    const outcome = await result.json();
+    if (!verifyRes.ok) {
+      console.error('Turnstile siteverify fetch failed:', verifyRes.status, verifyRes.statusText);
+      return new Response('Verification service error.', { status: 502 });
+    }
 
-    if (outcome.success) {
-      console.log('Turnstile verification successful.'); // Log success
-      console.log('Received pathIdentifier:', pathIdentifier); // Log received pathIdentifier
+    const outcome = await verifyRes.json();
+    console.log('Turnstile outcome:', JSON.stringify(outcome));
 
-      const finalRedirectUrl = redirectMap[pathIdentifier];
-      console.log('Determined finalRedirectUrl:', finalRedirectUrl); // Log determined redirect URL
-
-      if (finalRedirectUrl) {
-        return new Response(null, {
-          status: 302,
-          headers: {
-            'Location': finalRedirectUrl,
-          },
-        });
-      } else {
-        console.error('No valid redirect path identifier found in map for:', pathIdentifier); // Log if path not found
-        return new Response('CAPTCHA verification successful! No valid redirect path identifier provided.', { status: 200 });
-      }
-    } else {
-      console.error('CAPTCHA verification failed. Error codes:', outcome['error-codes']); // Log error codes
+    if (!outcome.success) {
+      console.error('Turnstile verification failed. error-codes:', outcome['error-codes']);
       return new Response('CAPTCHA verification failed. Please try again.', { status: 403 });
     }
-  }
 
-  // Handle GET requests or other methods (e.g., serve a simple page or redirect)
-  return new Response('This is a Turnstile verification endpoint. Please submit a POST request with a Turnstile token.', { status: 200 });
+    // optional hostname check (uncomment if you want to enforce)
+    if (outcome.hostname && outcome.hostname !== 'www.yueplush.com') {
+      console.warn('Token hostname mismatch:', outcome.hostname);
+      // you may choose to reject here if strict
+    }
+
+    if (!finalRedirectUrl) {
+      console.error('Unknown pathIdentifier after normalization:', key);
+      // helpful JSON for debugging (remove or simplify in production)
+      const payload = {
+        ok: false,
+        message: 'Verification succeeded but unknown target.',
+        received: key,
+        valid_keys: Object.keys(redirectMap),
+      };
+      return new Response(JSON.stringify(payload), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    // detect whether client expects JSON (AJAX/fetch) and respond accordingly
+    const accept = (request.headers.get('accept') || '').toLowerCase();
+    const isAjax = request.headers.get('x-requested-with') === 'XMLHttpRequest' || accept.includes('application/json');
+
+    if (isAjax) {
+      // return JSON with redirect URL so client-side JS can navigate
+      return new Response(JSON.stringify({ ok: true, redirect: finalRedirectUrl }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    } else {
+      // native form submit: redirect with 302 so browser navigates
+      return Response.redirect(finalRedirectUrl, 302);
+    }
+  } catch (err) {
+    console.error('Worker error:', err);
+    return new Response('Server error', { status: 500 });
+  }
 }
