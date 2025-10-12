@@ -1,1 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Art Trade - Protected</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 5rem;
+      color: #ddd;
+      background-color: #2E424A;
+    }
+    h1 { color: #fff; }
+    form { display: inline-block; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Art Trade — Access Verification</h1>
+  <p>Please complete the CAPTCHA to continue.</p>
 
+  <form id="turnstile-form" action="https://defend-bot.plushiesdealer.workers.dev/" method="POST">
+    <!-- Turnstile ウィジェット -->
+    <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC"
+         data-callback="onTurnstileSuccess"></div>
+
+    <!-- ✅ path_identifierを arttrade に変更 -->
+    <input type="hidden" name="path_identifier" value="arttrade" />
+  </form>
+
+  <script>
+    // Turnstile が成功したら自動でフォーム送信
+    function onTurnstileSuccess(token) {
+      const form = document.getElementById('turnstile-form');
+      // 念のためトークンを hidden に追加
+      if (!form.querySelector('input[name="cf-turnstile-response"]')) {
+        const i = document.createElement('input');
+        i.type = 'hidden';
+        i.name = 'cf-turnstile-response';
+        i.value = token;
+        form.appendChild(i);
+      }
+      form.submit(); // 自動送信 → ワーカーで 302 リダイレクト
+    }
+  </script>
+</body>
+</html>
