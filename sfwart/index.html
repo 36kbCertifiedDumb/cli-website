@@ -27,8 +27,8 @@
          data-sitekey="0x4AAAAAAB5H4EZzzavt_LSC"
          data-callback="onTurnstileSuccess"></div>
 
-    <!-- ✅ path_identifier を正しいディレクトリに変更 -->
-    <input type="hidden" name="path_identifier" value="/sfwart/" />
+    <!-- path_identifier: ワーカーの redirectMap のキーと「完全一致」させる（スラッシュ無しが推奨） -->
+    <input type="hidden" name="path_identifier" value="sfwart" />
   </form>
 
   <script>
@@ -43,9 +43,7 @@
         i.value = token;
         form.appendChild(i);
       }
-
-      // ✅ 「Verify & Open」ボタンなし → 自動送信で即リダイレクト
-      form.submit();
+      form.submit(); // 自動送信 -> ワーカー側で 302 リダイレクトされる想定
     }
   </script>
 </body>
