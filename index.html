@@ -64,7 +64,7 @@
     <a href="#gallery">gallery</a> /
     <a href="#commission">commission</a> /
     <a href="#link">link</a> /
-    <a href="#support">support</a>
+    <a href="#support" class="friendly-link">support</a>
   </nav>
 
   <main id="content">
@@ -87,7 +87,7 @@
           ✅️ email<br>
           &nbsp;&nbsp;contact★yueplush.com (★→@)<br><br>
           ✅️ community<br>
-          &nbsp;&nbsp;<a href="https://discord.gg/E2JVeWVHds">join my private discord server</a>
+          &nbsp;&nbsp;<iframe src="https://discord.com/widget?id=1110451149045252106&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </p>
       </div>
     </section>
@@ -155,5 +155,24 @@
   </main>
 
   <div class="cursor" aria-hidden="true"></div>
+
+  <style>
+    /* FRIENDLY orange accent for support nav link */
+    nav a.friendly-link {
+      color: #FF8C00;
+      text-shadow:
+        0 0 2px rgba(255, 140, 0, 0.9),
+        0 0 5px rgba(255, 140, 0, 0.7),
+        0 0 10px rgba(255, 110, 0, 0.5);
+      font-weight: bold;
+    }
+
+    nav a.friendly-link:hover {
+      background-color: #FF8C00;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(255, 160, 0, 0.9);
+      text-shadow: none;
+    }
+  </style>
 </body>
 </html>
