@@ -1,14 +1,15 @@
 /* ===================================
    CRT + TRUST BLUE THEME (NO JS)
+   Background unified: #2e004d
    =================================== */
 :root {
-  --bg: #000000;               /* background (creative / black) */
-  --text: #9BDDFF;             /* base text color (trust blue) */
-  --text-strong: #00E5FF;      /* bright cyan for highlights */
-  --text-dim: #6FB7FF;         /* soft secondary tone */
-  --link: #9BDDFF;             /* normal link color */
-  --link-hover-bg: #00E5FF;    /* link hover background */
-  --muted: #7AA0B8;            /* subtle tone for small notes */
+  --bg: #2e004d;               /* deep creative purple background */
+  --text: #9BDDFF;             /* base trust blue text */
+  --text-strong: #00E5FF;      /* bright cyan highlight */
+  --text-dim: #6FB7FF;         /* softer secondary tone */
+  --link: #9BDDFF;             /* link color */
+  --link-hover-bg: #00E5FF;    /* hover invert background */
+  --muted: #7AA0B8;            /* subtle low-contrast tone */
 }
 
 /* ---------- Base ---------- */
@@ -24,7 +25,7 @@ body.theme-crt.trust-blue {
     0 0 0.12em rgba(0, 229, 255, 0.6);
 }
 
-/* CRT scanlines and vignette overlay */
+/* CRT scanlines & vignette overlay */
 body.theme-crt.trust-blue::before {
   content: "";
   position: fixed;
@@ -91,7 +92,7 @@ a:focus-visible {
   color: #EAFFFF;
 }
 
-/* ---------- Navigation and Sections ---------- */
+/* ---------- Navigation & Sections ---------- */
 nav {
   margin: 20px 0;
   color: var(--text-dim);
@@ -108,7 +109,7 @@ h2 {
     0 0 0.18em rgba(0, 229, 255, 0.9);
 }
 
-/* For optional muted text */
+/* Optional muted text */
 .muted { color: var(--muted); }
 
 /* ---------- Blinking Cursor ---------- */
