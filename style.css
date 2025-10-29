@@ -1,15 +1,16 @@
 /* ===================================
    CRT + TRUST BLUE THEME (NO JS)
-   Background unified: #2e004d
+   Background: #2e004d
+   Soft glow text
    =================================== */
 :root {
-  --bg: #2e004d;               /* deep creative purple background */
-  --text: #9BDDFF;             /* base trust blue text */
+  --bg: #2e004d;               /* deep creative purple */
+  --text: #9BDDFF;             /* base trust blue */
   --text-strong: #00E5FF;      /* bright cyan highlight */
-  --text-dim: #6FB7FF;         /* softer secondary tone */
+  --text-dim: #6FB7FF;         /* secondary tone */
   --link: #9BDDFF;             /* link color */
   --link-hover-bg: #00E5FF;    /* hover invert background */
-  --muted: #7AA0B8;            /* subtle low-contrast tone */
+  --muted: #7AA0B8;            /* subtle tone */
 }
 
 /* ---------- Base ---------- */
@@ -20,12 +21,18 @@ body.theme-crt.trust-blue {
   font-size: 16px;
   line-height: 1.55;
   padding: 20px;
+
+  /* soft glow / slight blur */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   text-shadow:
-    0 0 0.4em rgba(0, 229, 255, 0.35),
-    0 0 0.12em rgba(0, 229, 255, 0.6);
+    0 0 0.04em rgba(0, 229, 255, 0.70),
+    0 0 0.12em rgba(0, 229, 255, 0.55),
+    0 0 0.28em rgba(0, 229, 255, 0.35);
 }
 
-/* CRT scanlines & vignette overlay */
+/* CRT scanlines and vignette */
 body.theme-crt.trust-blue::before {
   content: "";
   position: fixed;
@@ -44,7 +51,7 @@ body.theme-crt.trust-blue::before {
   opacity: 0.15;
 }
 
-/* Accessibility: disable motion if user prefers reduced animation */
+/* Accessibility: reduce animation if requested */
 @media (prefers-reduced-motion: reduce) {
   body.theme-crt.trust-blue::before { opacity: 0; }
   .cursor { animation: none; }
@@ -55,11 +62,12 @@ body.theme-crt.trust-blue::before {
   color: var(--text-strong);
   font-size: 10px;
   text-shadow:
-    0 0 0.6em rgba(0, 229, 255, 0.45),
-    0 0 0.2em rgba(0, 229, 255, 0.8);
+    0 0 0.08em rgba(0, 229, 255, 0.90),
+    0 0 0.28em rgba(0, 229, 255, 0.55),
+    0 0 0.65em rgba(0, 229, 255, 0.35);
 }
 
-/* Preserve spacing */
+/* preserve spacing */
 pre { white-space: pre; }
 
 /* ---------- Links ---------- */
@@ -67,26 +75,27 @@ a {
   color: var(--link);
   text-decoration: none;
   text-shadow:
-    0 0 0.35em rgba(0, 229, 255, 0.35),
-    0 0 0.1em rgba(0, 229, 255, 0.55);
-  transition: background-color 0.12s linear, color 0.12s linear, box-shadow 0.12s linear;
+    0 0 0.05em rgba(0, 229, 255, 0.70),
+    0 0 0.18em rgba(0, 229, 255, 0.45);
+  transition: background-color 0.12s linear, color 0.12s linear, box-shadow 0.12s linear, text-shadow 0.12s linear;
 }
 
 a:hover,
 a:focus-visible {
   background-color: var(--link-hover-bg);
   color: var(--bg);
-  box-shadow: 0 0 0.6em rgba(0, 229, 255, 0.8);
+  box-shadow: 0 0 0.65em rgba(0, 229, 255, 0.9);
+  text-shadow: none; /* crisper while inverted */
   outline: none;
 }
 
-/* Keyboard focus ring */
+/* keyboard focus */
 a:focus-visible {
   outline: 2px dashed var(--text-strong);
   outline-offset: 3px;
 }
 
-/* Text selection color */
+/* selection color */
 ::selection {
   background: rgba(0, 229, 255, 0.28);
   color: #EAFFFF;
@@ -98,18 +107,19 @@ nav {
   color: var(--text-dim);
 }
 
-/* Section titles */
+/* section titles */
 h2 {
   color: var(--text-strong);
   border-bottom: 1px solid var(--text-strong);
   padding-bottom: 5px;
   margin-bottom: 10px;
   text-shadow:
-    0 0 0.7em rgba(0, 229, 255, 0.5),
-    0 0 0.18em rgba(0, 229, 255, 0.9);
+    0 0 0.06em rgba(0, 229, 255, 0.85),
+    0 0 0.22em rgba(0, 229, 255, 0.50),
+    0 0 0.55em rgba(0, 229, 255, 0.35);
 }
 
-/* Optional muted text */
+/* optional muted text */
 .muted { color: var(--muted); }
 
 /* ---------- Blinking Cursor ---------- */
@@ -140,3 +150,7 @@ section:target { display: block; }
   #ascii-art { font-size: 9px; }
   pre { overflow-x: auto; }
 }
+
+/* utility: disable glow where needed */
+.no-bloom,
+.no-bloom * { text-shadow: none !important; }
