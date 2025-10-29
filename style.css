@@ -1,7 +1,7 @@
 /* ===================================
    CRT + TRUST BLUE THEME (NO JS)
    Background: #2e004d
-   Support section highlighted in orange (FRIENDLY)
+   FRIENDLY orange applied to nav link [support]
    =================================== */
 :root {
   --bg: #2e004d;               /* deep creative purple */
@@ -11,7 +11,7 @@
   --link: #9BDDFF;
   --link-hover-bg: #00E5FF;
   --muted: #7AA0B8;
-  --friendly: #FF8C00;         /* warm orange highlight */
+  --friendly: #FF8C00;         /* warm orange accent */
 }
 
 /* ---------- Base ---------- */
@@ -88,6 +88,24 @@ a:focus-visible {
   outline: none;
 }
 
+/* special orange highlight for nav [support] */
+nav a[href="#support"] {
+  color: var(--friendly);
+  text-shadow:
+    0 0 2px rgba(255, 140, 0, 0.9),
+    0 0 5px rgba(255, 140, 0, 0.7),
+    0 0 10px rgba(255, 110, 0, 0.5);
+  font-weight: bold;
+}
+
+/* hover on support link (invert to glowing amber) */
+nav a[href="#support"]:hover {
+  background-color: var(--friendly);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 160, 0, 0.9);
+  text-shadow: none;
+}
+
 /* focus ring */
 a:focus-visible {
   outline: 2px dashed var(--text-strong);
@@ -106,7 +124,7 @@ nav {
   color: var(--text-dim);
 }
 
-/* section titles */
+/* headings */
 h2 {
   color: var(--text-strong);
   border-bottom: 1px solid var(--text-strong);
@@ -116,21 +134,6 @@ h2 {
     0 0 2px rgba(0, 229, 255, 0.95),
     0 0 6px rgba(0, 229, 255, 0.7),
     0 0 14px rgba(0, 229, 255, 0.45);
-}
-
-/* ---------- FRIENDLY highlight for SUPPORT ---------- */
-#support h2 {
-  background-color: var(--friendly);
-  color: #fff;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  display: inline-block;
-  text-shadow:
-    0 0 3px rgba(255, 180, 80, 0.9),
-    0 0 6px rgba(255, 160, 60, 0.7),
-    0 0 14px rgba(255, 120, 0, 0.4);
-  box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
 }
 
 /* muted text */
