@@ -1,77 +1,141 @@
-body {
-    background-color: #415a5b;
-    color: #00FF00; /* Green text */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    line-height: 1.4;
-    padding: 20px;
+/* ===================================
+   CRT + TRUST BLUE THEME (NO JS)
+   =================================== */
+:root {
+  --bg: #000000;               /* background (creative / black) */
+  --text: #9BDDFF;             /* base text color (trust blue) */
+  --text-strong: #00E5FF;      /* bright cyan for highlights */
+  --text-dim: #6FB7FF;         /* soft secondary tone */
+  --link: #9BDDFF;             /* normal link color */
+  --link-hover-bg: #00E5FF;    /* link hover background */
+  --muted: #7AA0B8;            /* subtle tone for small notes */
 }
 
+/* ---------- Base ---------- */
+body.theme-crt.trust-blue {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.55;
+  padding: 20px;
+  text-shadow:
+    0 0 0.4em rgba(0, 229, 255, 0.35),
+    0 0 0.12em rgba(0, 229, 255, 0.6);
+}
+
+/* CRT scanlines and vignette overlay */
+body.theme-crt.trust-blue::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 2px,
+      transparent 4px
+    ),
+    radial-gradient(ellipse at center, rgba(0, 180, 255, 0.08), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.15;
+}
+
+/* Accessibility: disable motion if user prefers reduced animation */
+@media (prefers-reduced-motion: reduce) {
+  body.theme-crt.trust-blue::before { opacity: 0; }
+  .cursor { animation: none; }
+}
+
+/* ---------- ASCII Art ---------- */
 #ascii-art {
-    color: #00FF00; /* Green accent */
-    font-size: 10px;
+  color: var(--text-strong);
+  font-size: 10px;
+  text-shadow:
+    0 0 0.6em rgba(0, 229, 255, 0.45),
+    0 0 0.2em rgba(0, 229, 255, 0.8);
 }
 
-pre {
-    white-space: pre;
-}
+/* Preserve spacing */
+pre { white-space: pre; }
 
+/* ---------- Links ---------- */
 a {
-    color: #00FF00; /* Green accent */
-    text-decoration: none;
+  color: var(--link);
+  text-decoration: none;
+  text-shadow:
+    0 0 0.35em rgba(0, 229, 255, 0.35),
+    0 0 0.1em rgba(0, 229, 255, 0.55);
+  transition: background-color 0.12s linear, color 0.12s linear, box-shadow 0.12s linear;
 }
 
-a:hover {
-    background-color: #00FF00;
-    color: #415a5b;
+a:hover,
+a:focus-visible {
+  background-color: var(--link-hover-bg);
+  color: var(--bg);
+  box-shadow: 0 0 0.6em rgba(0, 229, 255, 0.8);
+  outline: none;
 }
 
+/* Keyboard focus ring */
+a:focus-visible {
+  outline: 2px dashed var(--text-strong);
+  outline-offset: 3px;
+}
+
+/* Text selection color */
+::selection {
+  background: rgba(0, 229, 255, 0.28);
+  color: #EAFFFF;
+}
+
+/* ---------- Navigation and Sections ---------- */
 nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin: 20px 0;
+  color: var(--text-dim);
 }
 
+/* Section titles */
 h2 {
-    border-bottom: 1px solid #00FF00;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: #00FF00; /* Green header text */
+  color: var(--text-strong);
+  border-bottom: 1px solid var(--text-strong);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 0.7em rgba(0, 229, 255, 0.5),
+    0 0 0.18em rgba(0, 229, 255, 0.9);
 }
 
+/* For optional muted text */
+.muted { color: var(--muted); }
+
+/* ---------- Blinking Cursor ---------- */
 .cursor {
-    display: inline-block;
-    width: 10px;
-    height: 16px;
-    background-color: #00FF00;
-    animation: blink 1s step-end infinite;
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background-color: var(--text-strong);
+  animation: blink 1s step-end infinite;
+  box-shadow: 0 0 0.5em rgba(0, 229, 255, 0.9);
 }
 
 @keyframes blink {
-    from, to {
-        background-color: transparent;
-    }
-    50% {
-        background-color: #00FF00;
-    }
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
 }
 
-section {
-    display: none;
-}
+/* ---------- Section Visibility ---------- */
+section { display: none; }
+section:target { display: block; }
 
-section:target {
-    display: block;
-}
-
+/* ---------- Responsive ---------- */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
-        font-size: 14px;
-    }
-    #ascii-art {
-        font-size: 8px;
-    }
-    pre {
-        overflow-x: auto;
-    }
+  body.theme-crt.trust-blue {
+    padding: 10px;
+    font-size: 14px;
+  }
+  #ascii-art { font-size: 9px; }
+  pre { overflow-x: auto; }
 }
