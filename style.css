@@ -89,7 +89,8 @@ a:focus-visible {
 }
 
 /* special orange highlight for nav [support] */
-nav a[href="#support"] {
+nav a[href="#support"],
+nav a.friendly-link {
   color: var(--friendly);
   text-shadow:
     0 0 2px rgba(255, 140, 0, 0.9),
@@ -99,7 +100,8 @@ nav a[href="#support"] {
 }
 
 /* hover on support link (invert to glowing amber) */
-nav a[href="#support"]:hover {
+nav a[href="#support"]:hover,
+nav a.friendly-link:hover {
   background-color: var(--friendly);
   color: #fff;
   box-shadow: 0 0 12px rgba(255, 160, 0, 0.9);
@@ -139,6 +141,15 @@ h2 {
 /* muted text */
 .muted { color: var(--muted); }
 
+/* ---------- Discord widget (responsive) ---------- */
+iframe[src*="discord.com/widget"] {
+  max-width: 100%;
+  width: 350px;
+  height: 500px;
+  border: 0;
+  display: block;
+}
+
 /* ---------- Blinking Cursor ---------- */
 .cursor {
   display: inline-block;
@@ -166,4 +177,7 @@ section:target { display: block; }
   }
   #ascii-art { font-size: 9px; }
   pre { overflow-x: auto; }
+  iframe[src*="discord.com/widget"] {
+    height: 420px; /* shorter on small screens */
+  }
 }
