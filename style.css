@@ -1,7 +1,7 @@
 /* ===================================
    CRT + TRUST BLUE THEME (NO JS)
    Background: #2e004d
-   Soft blurred blue outline
+   Support section highlighted in orange (FRIENDLY)
    =================================== */
 :root {
   --bg: #2e004d;               /* deep creative purple */
@@ -11,6 +11,7 @@
   --link: #9BDDFF;
   --link-hover-bg: #00E5FF;
   --muted: #7AA0B8;
+  --friendly: #FF8C00;         /* warm orange highlight */
 }
 
 /* ---------- Base ---------- */
@@ -21,8 +22,6 @@ body.theme-crt.trust-blue {
   font-size: 16px;
   line-height: 1.55;
   padding: 20px;
-
-  /* blurred glow outline */
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -67,7 +66,6 @@ body.theme-crt.trust-blue::before {
     0 0 12px rgba(0, 229, 255, 0.4);
 }
 
-/* preserve spacing */
 pre { white-space: pre; }
 
 /* ---------- Links ---------- */
@@ -108,7 +106,7 @@ nav {
   color: var(--text-dim);
 }
 
-/* headings */
+/* section titles */
 h2 {
   color: var(--text-strong);
   border-bottom: 1px solid var(--text-strong);
@@ -118,6 +116,21 @@ h2 {
     0 0 2px rgba(0, 229, 255, 0.95),
     0 0 6px rgba(0, 229, 255, 0.7),
     0 0 14px rgba(0, 229, 255, 0.45);
+}
+
+/* ---------- FRIENDLY highlight for SUPPORT ---------- */
+#support h2 {
+  background-color: var(--friendly);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  text-shadow:
+    0 0 3px rgba(255, 180, 80, 0.9),
+    0 0 6px rgba(255, 160, 60, 0.7),
+    0 0 14px rgba(255, 120, 0, 0.4);
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
 }
 
 /* muted text */
