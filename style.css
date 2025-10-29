@@ -1,16 +1,16 @@
 /* ===================================
    CRT + TRUST BLUE THEME (NO JS)
    Background: #2e004d
-   Soft glow text
+   Soft blurred blue outline
    =================================== */
 :root {
   --bg: #2e004d;               /* deep creative purple */
   --text: #9BDDFF;             /* base trust blue */
   --text-strong: #00E5FF;      /* bright cyan highlight */
-  --text-dim: #6FB7FF;         /* secondary tone */
-  --link: #9BDDFF;             /* link color */
-  --link-hover-bg: #00E5FF;    /* hover invert background */
-  --muted: #7AA0B8;            /* subtle tone */
+  --text-dim: #6FB7FF;         /* softer tone */
+  --link: #9BDDFF;
+  --link-hover-bg: #00E5FF;
+  --muted: #7AA0B8;
 }
 
 /* ---------- Base ---------- */
@@ -22,17 +22,17 @@ body.theme-crt.trust-blue {
   line-height: 1.55;
   padding: 20px;
 
-  /* soft glow / slight blur */
+  /* blurred glow outline */
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   text-shadow:
-    0 0 0.04em rgba(0, 229, 255, 0.70),
-    0 0 0.12em rgba(0, 229, 255, 0.55),
-    0 0 0.28em rgba(0, 229, 255, 0.35);
+    0 0 2px rgba(0, 229, 255, 0.9),
+    0 0 4px rgba(0, 229, 255, 0.6),
+    0 0 8px rgba(0, 229, 255, 0.4);
 }
 
-/* CRT scanlines and vignette */
+/* CRT scanlines + vignette */
 body.theme-crt.trust-blue::before {
   content: "";
   position: fixed;
@@ -51,7 +51,7 @@ body.theme-crt.trust-blue::before {
   opacity: 0.15;
 }
 
-/* Accessibility: reduce animation if requested */
+/* reduce motion */
 @media (prefers-reduced-motion: reduce) {
   body.theme-crt.trust-blue::before { opacity: 0; }
   .cursor { animation: none; }
@@ -62,9 +62,9 @@ body.theme-crt.trust-blue::before {
   color: var(--text-strong);
   font-size: 10px;
   text-shadow:
-    0 0 0.08em rgba(0, 229, 255, 0.90),
-    0 0 0.28em rgba(0, 229, 255, 0.55),
-    0 0 0.65em rgba(0, 229, 255, 0.35);
+    0 0 2px rgba(0, 229, 255, 0.9),
+    0 0 5px rgba(0, 229, 255, 0.7),
+    0 0 12px rgba(0, 229, 255, 0.4);
 }
 
 /* preserve spacing */
@@ -75,21 +75,22 @@ a {
   color: var(--link);
   text-decoration: none;
   text-shadow:
-    0 0 0.05em rgba(0, 229, 255, 0.70),
-    0 0 0.18em rgba(0, 229, 255, 0.45);
-  transition: background-color 0.12s linear, color 0.12s linear, box-shadow 0.12s linear, text-shadow 0.12s linear;
+    0 0 2px rgba(0, 229, 255, 0.85),
+    0 0 5px rgba(0, 229, 255, 0.6),
+    0 0 10px rgba(0, 229, 255, 0.4);
+  transition: background-color 0.15s linear, color 0.15s linear, box-shadow 0.15s linear;
 }
 
 a:hover,
 a:focus-visible {
   background-color: var(--link-hover-bg);
   color: var(--bg);
-  box-shadow: 0 0 0.65em rgba(0, 229, 255, 0.9);
-  text-shadow: none; /* crisper while inverted */
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.9);
+  text-shadow: none;
   outline: none;
 }
 
-/* keyboard focus */
+/* focus ring */
 a:focus-visible {
   outline: 2px dashed var(--text-strong);
   outline-offset: 3px;
@@ -97,7 +98,7 @@ a:focus-visible {
 
 /* selection color */
 ::selection {
-  background: rgba(0, 229, 255, 0.28);
+  background: rgba(0, 229, 255, 0.3);
   color: #EAFFFF;
 }
 
@@ -107,19 +108,19 @@ nav {
   color: var(--text-dim);
 }
 
-/* section titles */
+/* headings */
 h2 {
   color: var(--text-strong);
   border-bottom: 1px solid var(--text-strong);
   padding-bottom: 5px;
   margin-bottom: 10px;
   text-shadow:
-    0 0 0.06em rgba(0, 229, 255, 0.85),
-    0 0 0.22em rgba(0, 229, 255, 0.50),
-    0 0 0.55em rgba(0, 229, 255, 0.35);
+    0 0 2px rgba(0, 229, 255, 0.95),
+    0 0 6px rgba(0, 229, 255, 0.7),
+    0 0 14px rgba(0, 229, 255, 0.45);
 }
 
-/* optional muted text */
+/* muted text */
 .muted { color: var(--muted); }
 
 /* ---------- Blinking Cursor ---------- */
@@ -129,7 +130,7 @@ h2 {
   height: 16px;
   background-color: var(--text-strong);
   animation: blink 1s step-end infinite;
-  box-shadow: 0 0 0.5em rgba(0, 229, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
 }
 
 @keyframes blink {
@@ -150,7 +151,3 @@ section:target { display: block; }
   #ascii-art { font-size: 9px; }
   pre { overflow-x: auto; }
 }
-
-/* utility: disable glow where needed */
-.no-bloom,
-.no-bloom * { text-shadow: none !important; }
