@@ -102,6 +102,10 @@
 
     <section id="gallery">
       <h2>gallery</h2>
+      <div id="gallery-status" style="margin-top: 0.5rem; font-size: 0.9rem;">
+        <span id="gallery-status-icon">⏳</span>
+        <span id="gallery-status-text">server status: checking...</span>
+      </div>
       <p><strong>✅️ new work</strong><br>
         &nbsp;&nbsp;<a href="https://www.yueplush.com/sfwart/">sfw art</a><br>
         &nbsp;&nbsp;<a href="https://www.yueplush.com/suggestive/">suggestive art</a>
@@ -330,5 +334,58 @@
       });
     });
   </script>
+  <script>
+(function () {
+  const icon = document.getElementById('gallery-status-icon');
+  const text = document.getElementById('gallery-status-text');
+  if (!icon || !text) return;
+
+  function setOnline() {
+    icon.textContent = '🟢';
+    text.textContent = 'server status: online';
+  }
+
+  function setOffline() {
+    icon.textContent = '🔴';
+    text.textContent = 'server status: offline';
+  }
+
+  function checkOnce() {
+    try {
+      // favicon.ico を読み込みテストに使う（CORS回避のため画像にしている）
+      const img = new Image();
+      const timeoutMs = 5000; // 5秒でタイムアウト
+
+      const url = 'https://gallery.yueplush.com/favicon.ico?cb=' + Date.now();
+
+      const timer = setTimeout(function () {
+        // 5秒待っても onload/onerror が来ない場合はオフライン扱い
+        img.src = '';
+        setOffline();
+      }, timeoutMs);
+
+      img.onload = function () {
+        clearTimeout(timer);
+        setOnline();
+      };
+
+      img.onerror = function () {
+        clearTimeout(timer);
+        setOffline();
+      };
+
+      img.src = url;
+    } catch (e) {
+      setOffline();
+    }
+  }
+
+  // 初回チェック
+  checkOnce();
+
+  // 60秒ごとに再チェック（お好みで変えてOK）
+  setInterval(checkOnce, 60000);
+})();
+</script>
 </body>
 </html>
