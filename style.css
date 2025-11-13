@@ -181,3 +181,64 @@ section:target { display: block; }
     height: 420px; /* shorter on small screens */
   }
 }
+
+/* ---------- Cookie Consent Banner ---------- */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  padding: 15px;
+  border-top: 1px solid var(--text-strong);
+  z-index: 1000;
+  animation: slide-up 0.5s ease-out;
+}
+
+.cookie-banner.slide-down {
+  animation: slide-down 0.5s ease-out;
+}
+
+.cookie-banner p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-button {
+  background-color: var(--text-strong);
+  color: var(--bg);
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  transition: background-color 0.15s linear, color 0.15s linear;
+}
+
+.cookie-button:hover {
+  background-color: var(--link-hover-bg);
+  color: var(--bg);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
