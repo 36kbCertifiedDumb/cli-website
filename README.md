@@ -52,7 +52,6 @@ we should "hack the planet" once again.<br>
 <br>
 GOD Bless WebDev Community!<br>
 <br>
-<br>
 ## ✅️Google PageSpeed Insights<br>
 [benchmark](https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop)
 <br>
