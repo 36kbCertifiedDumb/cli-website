@@ -133,3 +133,5 @@ all illusions and rediscovered the true essence of the web.
 **Fight for good, not evil — YuePlush**
 
 sign off.
+
+> This repository is kept as a record of an extreme minimal-web experiment that reached real-world users.
