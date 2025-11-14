@@ -1,9 +1,9 @@
 ## ▼ This repository is fully archived for educational purposes.<br>
 <br>
-# ▼ If You wish to feed something Coffee fee<br>
+### ▼ If You wish to feed something Coffee fee<br>
 i have Ko-fi account for this, feel free to feed the coffee,<br>
 i love caffein than alchool! ^x^ #DataLove<br>
-▼Ko-fi<br>
+### ▼Ko-fi<br>
 [Feed the coffee for Dumb YuePlush](https://ko-fi.com/yueplush)<br>
 <br>
 # ▼my sites how to build up this<br>
