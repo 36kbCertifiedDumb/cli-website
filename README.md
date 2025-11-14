@@ -90,7 +90,7 @@ i wonder why, should i eat something delicious? x.x)
 
 ## Monologue
 
-What did an unemployed DevOps see after minimizing development to the bare minimum?
+▼ What did an unemployed DevOps see after minimizing development to the bare minimum?
 
 I arrived at one truth: modern web development is a never-ending arms race,  
 constantly creating new problems to solve the problems we create ourselves.  
