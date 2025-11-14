@@ -5,7 +5,7 @@ but Self-hosted part, i separated turnstile htmls for subdomain backend system,<
 its just simple website<br>
 i know its insane, but actually happend this.<br>
 <br>
-![File Sizes Graph]([path/image.png](https://data-love.yueplush.com/img/img1.png))<br>
+![File Sizes Graph]([[path/image.png](https://data-love.yueplush.com/img/img1.png)](https://data-love.yueplush.com/img/img1.png))<br>
 ![Core Web Vitals]([path/image.png](https://data-love.yueplush.com/img/img2.png))<br>
 ![ALL Disabled Anti-crawler or bot]([path/image.png](https://data-love.yueplush.com/img/img3.png))<br>
 ![Google PageSpeed Insights Score]([path/image.png](https://data-love.yueplush.com/img/img4.png))<br>
