@@ -1,18 +1,19 @@
-> 🧊 This repository is archived.<br>
-> Active development has moved to Private Repository<br>
-
 ## Cloudflare Products Used
 This project uses the following Cloudflare products in addition to Cloudflare Pages / Workers Assets:
 
 - **Cloudflare Pages** — static hosting for the main smol website  
 - **Cloudflare Turnstile** — human verification protecting self-hosted backend (Immich / Owncast)  
 - **Cloudflare DNS** — domain and subdomain routing  
+- **Cloudflare Registrar (Domain)** — domain management for yueplush.com and subdomains  
 - **Cloudflare CDN / Cache** — global static content delivery  
-- *(Optional)* **Cloudflare Zero Trust Access** — if enabled, used to protect internal endpoints  
+- **Cloudflare Zero Trust Access** — if enabled, used to protect internal endpoints  
 
 This section is included to comply with the submission rules of Cloudflare’s What-I-Built channel.
 
 ---
+
+> 🧊 This repository is archived.<br>
+> Active development has moved to Private Repository<br>
 
 ## ▼ This repository is fully archived for educational purposes.
    ▼ Technical demo and source code of 
