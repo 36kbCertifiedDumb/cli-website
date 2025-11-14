@@ -4,7 +4,7 @@ and it just 8KB style.css combined for that.<br>
 but Self-hosted part(kinda immich gallery or some), <br>
 i separated turnstile htmls for subdomain backend system,<br>
 its just simple website<br>
-i know its insane, but actually happend this.<br><br>
+i know its insane, but actually happend this.<br>
 <br>
 For example, I'm a big fan of <br>
 © From Software / Armored Core's intentional "purging of all heavy parts" approach, <br>
