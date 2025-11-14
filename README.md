@@ -4,8 +4,8 @@ web perforcmance has REAL, so i admit, to deploy and share MIT License
 for WebDev Community, 
 i think i found for solution "Vaccine" for their Expanding WebDev Warfare tbh
 We honestly create new problems to solve the problems we created. 
-I present only one answer to this never-ending 
-Webdev Expanding Warfare under the MIT license. just for fun. ;)
+I present only one answer to this never-ending Webdev Expanding Warfare under the MIT license. 
+just for fun. ;)
 
 Our future going to maybe WEB3.0 or something, 
 but return to origin, its WEB1.0, then finally i understand "why we use Internet"
