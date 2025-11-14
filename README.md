@@ -1,3 +1,6 @@
+> 🧊 This repository is archived.
+> Active development has moved to: https://github.com/yueplush/www-yueplush-com
+
 ## ▼ This repository is fully archived for educational purposes.
 <img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
 <br>
