@@ -1,16 +1,10 @@
-#▼my sites how to build up this#<br>
+# ▼my sites how to build up this # <br>
 yeah technically its just almost 20KB ultra-low size index.html<br>
 and it just 8KB style.css combined for that.<br>
 but Self-hosted part, i separated turnstile htmls for subdomain backend system,<br>
 its just simple website<br>
 i know its insane, but actually happend this.<br>
-<br>
-![File Sizes Graph](https://data-love.yueplush.com/img/img1.png)
-![Core Web Vitals](https://data-love.yueplush.com/img/img2.png)
-![ALL Disabled Anti-crawler or bot](https://data-love.yueplush.com/img/img3.png)
-![Google PageSpeed Insights Scoreh](https://data-love.yueplush.com/img/img4.png)
 
-<br>
 #▼thoughs or something#<br>
 just CLI websites, i just create for hobby but some reason,<br>
 web perforcmance has REAL, so i admit, to deploy and share MIT License<br>
@@ -36,4 +30,11 @@ GOD Bless WebDev Community!<br>
 <br>
 #✅️Google PageSpeed Insights#<br>
 https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop<br>
+<br>
+![File Sizes Graph](https://data-love.yueplush.com/img/img1.png) <br>
+![Core Web Vitals](https://data-love.yueplush.com/img/img2.png) <br>
+![ALL Disabled Anti-crawler or bot](https://data-love.yueplush.com/img/img3.png) <br>
+![Google PageSpeed Insights Scoreh](https://data-love.yueplush.com/img/img4.png) <br>
+<br>
+<br>
 
