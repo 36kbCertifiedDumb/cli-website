@@ -15,6 +15,8 @@ This section is included to comply with the submission rules of Cloudflare’s W
 ---
 
 ## ▼ This repository is fully archived for educational purposes.
+   ▼ Technical demo and source code of 
+     what happens when you make a website as lightweight as possible. 
 <img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
 <br>
 Don't worry, I have prepared a separate repository for updates.<br>
