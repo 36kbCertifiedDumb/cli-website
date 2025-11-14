@@ -65,13 +65,10 @@ for old schools 90s internet things commons sense. but if i do that on Modern In
 something wrong or happend... i acutally so smol artist tbh...<br>
 i wonder why, should i eat something delicious? x.x)<br>
 <br>
-![File Sizes Graph](https://data-love.yueplush.com/img/img1.png)
-<img src="https://data-love.yueplush.com/img/img1.png" width="350">
-
-![File Sizes Graph](https://data-love.yueplush.com/img/img1.png) <br><img width="...">
-![Core Web Vitals](https://data-love.yueplush.com/img/img2.png) <br>
-![ALL Disabled Anti-crawler or bot](https://data-love.yueplush.com/img/img3.png) <br>
-![Google PageSpeed Insights Scoreh](https://data-love.yueplush.com/img/img4.png) <br>
+<img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
+<img src="https://data-love.yueplush.com/img/img2.png" width="350"><br>
+<img src="https://data-love.yueplush.com/img/img3.png" width="350"><br>
+<img src="https://data-love.yueplush.com/img/img4.png" width="350"><br>
 <br>
 <br>
 
