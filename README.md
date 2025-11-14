@@ -1,3 +1,6 @@
+> 🧊 This repository is archived.<br>
+> Active development has moved to Private Repository<br>
+
 ## Cloudflare Products Used
 This project uses the following Cloudflare products in addition to Cloudflare Pages / Workers Assets:
 
@@ -11,9 +14,6 @@ This project uses the following Cloudflare products in addition to Cloudflare Pa
 This section is included to comply with the submission rules of Cloudflare’s What-I-Built channel.
 
 ---
-
-> 🧊 This repository is archived.<br>
-> Active development has moved to Private Repository<br>
 
 ## ▼ This repository is fully archived for educational purposes.
    ▼ Technical demo and source code of 
