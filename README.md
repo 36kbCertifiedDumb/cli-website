@@ -56,8 +56,8 @@ GOD Bless WebDev Community!<br>
 [benchmark](https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop)
 <br>
 <br>
-### ▼ whats i archives <br>
-(ABOSOLUTELY NOT illegal thing i just simple to coding thing html,css, 
+### ▼ whats i archives <br><br>
+(ABOSOLUTELY NOT illegal thing i just simple to coding thing html,css, <br>
 "less javascript for sites performance"<br>
 <br>
 for old schools 90s internet things commons sense. but if i do that on Modern Internet for this<br>
@@ -69,5 +69,41 @@ i wonder why, should i eat something delicious? x.x)<br>
 <img src="https://data-love.yueplush.com/img/img3.png" width="350"><br>
 <img src="https://data-love.yueplush.com/img/img4.png" width="350"><br>
 <br>
+<br>
+## Monologue <br>
+### What did an unemployed DevOps see after minimizing development to the bare minimum?<br>
+<br>
+I arrived at one truth: modern web development is a never-ending arms race, <br>
+constantly creating new problems to solve the problems we create ourselves.<br>
+Frameworks make development easier, but they slow down sites. <br>
+Optimization tools are created to solve these problems. <br>
+Analytics tools help us understand users, <br>
+but they violate their privacy and make sites even slower. <br>
+Advertising generates revenue, but they destroy the user experience...<br>
+<br>
+I realized that all of this was a huge, <br>
+complex illusion designed to distract us from a single, <br>
+simple goal: delivering content to users.<br>
+<br>
+And so, I withdrew from the arms race.<br>
+I threw away all my weapons, stripped away all my armor, <br>
+and single-mindedly pursued speed. What I saw wasn't "nothing".<br>
+<br>
+What I saw was the very core of the web, <br>
+what remains after all the noise has faded away.<br>
+<br>
+It was a simple my beautiful sight, <br>
+a creator handing pure information to a receiver, <br>
+with respect, in the most efficient way.<br>
+<br>
+The moment I stopped pursuing wealth (traffic) <br>
+and technical complexity (functionality), <br>
+I gained the true "power" of the web, <br>
+the reliability of the ability to instantly and<br>
+reliably deliver value to anyone, in any environment.<br>
+<br>
+I did not see the image of an engineer who had lost his job, <br>
+but rather the image of an artist who had been freed from <br>
+all illusions and rediscovered the true essence of the web.<br>
 <br>
 
