@@ -1,3 +1,9 @@
+# ▼ If You wish to feed something Coffee fee<br>
+i have Ko-fi account for this, feel free to feed the coffee,<br>
+i love caffein than alchool! ^x^<br>
+▼Ko-fi<br>
+[Feed the coffee for Dumb YuePlush](https://ko-fi.com/yueplush)<br>
+<br>
 # ▼my sites how to build up this<br>
 yeah technically its just almost 20KB ultra-low size index.html<br>
 and it just 8KB style.css combined for that.<br>
@@ -48,7 +54,7 @@ GOD Bless WebDev Community!<br>
 <br>
 <br>
 ## ✅️Google PageSpeed Insights<br>
-https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop<br>
+[benchmark](https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop)
 <br>
 <br>
 ### ▼ whats i archives <br>
@@ -59,7 +65,10 @@ for old schools 90s internet things commons sense. but if i do that on Modern In
 something wrong or happend... i acutally so smol artist tbh...<br>
 i wonder why, should i eat something delicious? x.x)<br>
 <br>
-![File Sizes Graph](https://data-love.yueplush.com/img/img1.png) <br>
+![File Sizes Graph](https://data-love.yueplush.com/img/img1.png)
+<img src="https://data-love.yueplush.com/img/img1.png" width="350">
+
+![File Sizes Graph](https://data-love.yueplush.com/img/img1.png) <br><img width="...">
 ![Core Web Vitals](https://data-love.yueplush.com/img/img2.png) <br>
 ![ALL Disabled Anti-crawler or bot](https://data-love.yueplush.com/img/img3.png) <br>
 ![Google PageSpeed Insights Scoreh](https://data-love.yueplush.com/img/img4.png) <br>
