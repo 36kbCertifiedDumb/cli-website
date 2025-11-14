@@ -1,4 +1,5 @@
 ## ▼ This repository is fully archived for educational purposes.
+Don't worry, I have prepared a separate repository for updates.
 
 ▼ If You wish to feed something Coffee fee  
 i have Ko-fi account for this, feel free to feed the coffee,  
