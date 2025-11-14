@@ -9,7 +9,7 @@ i know its insane, but actually happend this.<br>
 ## ▼thoughs or something<br>
 just CLI websites, i just create for hobby but some reason,<br>
 web perforcmance has REAL, so i admit, to deploy and share MIT License<br>
-for WebDev Community, <br>
+for WebDev Community, its just Education stuff for old school thing.<br>
 i think i found for solution "Vaccine" for their Expanding WebDev Warfare tbh<br>
 We honestly create new problems to solve the problems we created. <br>
 I present only one answer to this never-ending Webdev Expanding Warfare under the MIT license. <br>
