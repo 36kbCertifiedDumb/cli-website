@@ -1,4 +1,6 @@
 ## ▼ This repository is fully archived for educational purposes.
+<img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
+<br>
 Don't worry, I have prepared a separate repository for updates.<br>
 [here the my personal smol websites](https://www.yueplush.com)
 
@@ -82,7 +84,6 @@ but if i do that on Modern Internet for this
 something wrong or happend... i acutally so smol artist tbh...  
 i wonder why, should i eat something delicious? x.x)
 
-<img src="https://data-love.yueplush.com/img/img1.png" width="350">
 <img src="https://data-love.yueplush.com/img/img2.png" width="350">
 <img src="https://data-love.yueplush.com/img/img3.png" width="350">
 <img src="https://data-love.yueplush.com/img/img4.png" width="350">
