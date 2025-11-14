@@ -1,6 +1,6 @@
 > 🧊 This repository is archived.<br>
 > Active development has moved to Private Repository<br>
-<br>
+
 ## ▼ This repository is fully archived for educational purposes.
 <img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
 <br>
