@@ -35,10 +35,12 @@ GOD Bless WebDev Community!<br>
 https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop<br>
 <br>
 <br>
-### whats i archives 
-(ABOSOLUTELY NOT illegal thing i just simple to coding thing(html,css,without javascript) 
-for old schools 90s internet things commons sense. but if i do that on Modern Internet for this
-something wrong or happend... i acutally smol artist tbh, honest...)
+### whats i archives <br>
+(ABOSOLUTELY NOT illegal thing i just simple to coding thing(html,css,without javascript) <br>
+for old schools 90s internet things commons sense. but if i do that on Modern Internet for this<br>
+something wrong or happend... i acutally so smol artist tbh...<br>
+i wonder why, should i eat something delicious? x.x)<br>
+<br>
 ![File Sizes Graph](https://data-love.yueplush.com/img/img1.png) <br>
 ![Core Web Vitals](https://data-love.yueplush.com/img/img2.png) <br>
 ![ALL Disabled Anti-crawler or bot](https://data-love.yueplush.com/img/img3.png) <br>
