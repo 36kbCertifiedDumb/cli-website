@@ -76,8 +76,9 @@ i wonder why, should i eat something delicious? x.x)<br>
 <img src="https://data-love.yueplush.com/img/img4.png" width="350"><br>
 <br>
 <br>
-## Monologue <br>
-### What did an unemployed DevOps see after minimizing development to the bare minimum?<br>
+## Monologue
+<br>
+What did an unemployed DevOps see after minimizing development to the bare minimum?<br>
 <br>
 I arrived at one truth: modern web development is a never-ending arms race, <br>
 constantly creating new problems to solve the problems we create ourselves.<br>
