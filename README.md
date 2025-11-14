@@ -3,8 +3,24 @@ yeah technically its just almost 20KB ultra-low size index.html<br>
 and it just 8KB style.css combined for that.<br>
 but Self-hosted part(kinda immich gallery or some), <br>
 i separated turnstile htmls for subdomain backend system,<br>
-its just simple website<br>
-i know its insane, but actually happend this.<br>
+its just simple website<br><br>
+i know its insane, but actually happend this.<br><br>
+<br>
+For example, I'm a big fan of <br>
+© From Software / Armored Core's intentional "purging of all heavy parts" approach, <br>
+which allows for ultra-mobility and lightweight design, <br>
+thereby enabling a variety of functions. <br>
+So, I went out of my way to trim down the site's file structure and <br>
+source code file size to the bare minimum, and just for fun, <br>
+I tried this approach with a <br>
+Cloudflare configuration (disabling all crawler settings), <br>
+<br>
+and something went "happend".<br>
+<br>
+Of course, for security reasons, <br>
+the self-hosted gallery(immich) portion bypassed by the Cloudflare tunnel is <br>
+protected by Turnstiles stored in a subdomain, <br>
+so only humans should actually be able to access the gallery.<br>
 <br>
 ## ▼thoughs or something<br>
 just CLI websites, i just create for hobby but some reason,<br>
