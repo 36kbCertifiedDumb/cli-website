@@ -92,7 +92,7 @@ i wonder why, should i eat something delicious? x.x)
 
 ▼ What did an unemployed DevOps see after minimizing development to the bare minimum?
 
-I arrived at one truth: modern web development is a never-ending arms race,  
+I arrived at one truth. modern web development is a never-ending arms race,  
 constantly creating new problems to solve the problems we create ourselves.  
 Frameworks make development easier, but they slow down sites.  
 Optimization tools are created to solve these problems.  
@@ -102,7 +102,7 @@ Advertising generates revenue, but they destroy the user experience...
 
 I realized that all of this was a huge,  
 complex illusion designed to distract us from a single,  
-simple goal: delivering content to users.
+simple goal. delivering content to users.
 
 And so, I withdrew from the arms race.  
 I threw away all my weapons, stripped away all my armor,  
