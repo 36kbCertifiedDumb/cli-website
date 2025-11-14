@@ -1,5 +1,5 @@
 ## ▼ This repository is fully archived for educational purposes.
-Don't worry, I have prepared a separate repository for updates.
+Don't worry, I have prepared a separate repository for updates.<br>
 [here the my personal smol websites](https://ko-fi.com/yueplush)
 
 ▼ If You wish to feed something Coffee fee  
