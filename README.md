@@ -1,12 +1,12 @@
 ## ▼ This repository is fully archived for educational purposes.<br>
 <br>
-### ▼ If You wish to feed something Coffee fee<br>
+▼ If You wish to feed something Coffee fee<br>
 i have Ko-fi account for this, feel free to feed the coffee,<br>
 i love caffein than alchool! ^x^ #DataLove<br>
-### ▼Ko-fi<br>
+▼Ko-fi<br>
 [Feed the coffee for Dumb YuePlush](https://ko-fi.com/yueplush)<br>
 <br>
-# ▼my sites how to build up this<br>
+▼my sites how to build up this<br>
 yeah technically its just almost 20KB ultra-low size index.html<br>
 and it just 8KB style.css combined for that.<br>
 but Self-hosted part(kinda immich gallery or some), <br>
@@ -31,7 +31,7 @@ the self-hosted gallery(immich) portion bypassed by the Cloudflare tunnel is <br
 protected by Turnstiles stored in a subdomain, <br>
 so only humans should actually be able to access the gallery.<br>
 <br>
-## ▼thoughs or something<br>
+▼thoughs or something<br>
 just CLI websites, i just create for hobby but some reason,<br>
 web perforcmance has REAL, so i admit, to deploy and share MIT License<br>
 for WebDev Community, its just Education stuff for old school thing.<br>
@@ -57,11 +57,11 @@ we should "hack the planet" once again.<br>
 <br>
 GOD Bless WebDev Community!<br>
 <br>
-## ✅️Google PageSpeed Insights<br>
+✅️Google PageSpeed Insights<br>
 [benchmark](https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop)
 <br>
 <br>
-### ▼ whats i archives <br><br>
+▼ whats i archives <br><br>
 (ABOSOLUTELY NOT illegal thing i just simple to coding thing html,css, <br>
 "less javascript for sites performance"<br>
 <br>
@@ -112,4 +112,8 @@ I did not see the image of an engineer who had lost his job, <br>
 but rather the image of an artist who had been freed from <br>
 all illusions and rediscovered the true essence of the web.<br>
 <br>
+Fight for good, not evil - YuePlush<br>
+<br>
+<br>
+sign off.<br>
 
