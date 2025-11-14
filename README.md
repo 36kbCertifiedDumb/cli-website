@@ -1,6 +1,14 @@
 > 🧊 This repository is archived.<br>
 > Active development has moved to Private Repository<br>
 
+## ▼ Technical demo and Educational Purpose, 
+## source code of what happens when you make a website as lightweight as possible. 
+To help with coding, I used: 
+Gemini CLI (of course, I manually fixed about half of the code.)
+Google PageSpeed ​​Insights (to measure the score.)
+emojicombos.com's Fox Ascii Art | https://emojicombos.com/fox-ascii-art
+90s's common internet coding thing.
+
 ## ▼ This repository is fully archived for educational purposes.
 <img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
 <br>
