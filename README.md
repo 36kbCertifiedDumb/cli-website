@@ -36,7 +36,9 @@ https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor
 <br>
 <br>
 ### whats i archives <br>
-(ABOSOLUTELY NOT illegal thing i just simple to coding thing(html,css,without javascript) <br>
+(ABOSOLUTELY NOT illegal thing i just simple to coding thing html,css, 
+"less javascript for sites performance"<br>
+<br>
 for old schools 90s internet things commons sense. but if i do that on Modern Internet for this<br>
 something wrong or happend... i acutally so smol artist tbh...<br>
 i wonder why, should i eat something delicious? x.x)<br>
