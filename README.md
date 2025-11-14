@@ -1,3 +1,5 @@
+## ▼ This repository is fully archived for educational purposes.<br>
+<br>
 # ▼ If You wish to feed something Coffee fee<br>
 i have Ko-fi account for this, feel free to feed the coffee,<br>
 i love caffein than alchool! ^x^ #DataLove<br>
@@ -13,7 +15,8 @@ its just simple website<br>
 i know its insane, but actually happend this.<br>
 <br>
 For example, I'm a big fan of <br>
-© From Software / Armored Core's intentional "purging of all heavy parts" approach, <br>
+© From Software / Armored Core's <br>
+intentional "purging of all heavy parts" approach, <br>
 which allows for ultra-mobility and lightweight design, <br>
 thereby enabling a variety of functions. <br>
 So, I went out of my way to trim down the site's file structure and <br>
@@ -35,7 +38,9 @@ for WebDev Community, its just Education stuff for old school thing.<br>
 <br>
 but i think i found for solution "Vaccine" for their Expanding WebDev Warfare tbh<br>
 We honestly create new problems to solve the problems we created. <br>
-I present only one answer to this never-ending Webdev Expanding Warfare under the MIT license. <br>
+I present only one answer to <br>
+this never-ending Webdev Expanding Warfare under the MIT license. <br>
+<br>
 just for fun. ;)<br>
 <br>
 Our future going to maybe WEB3.0 or something, <br>
@@ -60,7 +65,8 @@ GOD Bless WebDev Community!<br>
 (ABOSOLUTELY NOT illegal thing i just simple to coding thing html,css, <br>
 "less javascript for sites performance"<br>
 <br>
-for old schools 90s internet things commons sense. but if i do that on Modern Internet for this<br>
+for old schools 90s internet things commons sense. <br>
+but if i do that on Modern Internet for this<br>
 something wrong or happend... i acutally so smol artist tbh...<br>
 i wonder why, should i eat something delicious? x.x)<br>
 <br>
