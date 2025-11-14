@@ -5,10 +5,15 @@ but Self-hosted part, i separated turnstile htmls for subdomain backend system,<
 its just simple website<br>
 i know its insane, but actually happend this.<br>
 <br>
-![File Sizes Graph]([[path/image.png](https://data-love.yueplush.com/img/img1.png)](https://data-love.yueplush.com/img/img1.png))<br>
-![Core Web Vitals]([path/image.png](https://data-love.yueplush.com/img/img2.png))<br>
-![ALL Disabled Anti-crawler or bot]([path/image.png](https://data-love.yueplush.com/img/img3.png))<br>
-![Google PageSpeed Insights Score]([path/image.png](https://data-love.yueplush.com/img/img4.png))<br>
+![File Sizes Graph](https://data-love.yueplush.com/img/img1.png)
+![Core Web Vitals](datalove/img2.webp)
+![ALL Disabled Anti-crawler or bot](datalove/img3.webp)
+![Google PageSpeed Insights Scoreh](datalove/img4.webp)
+
+![File Sizes Graph]([datalove/img1.webp](https://data-love.yueplush.com/img/img1.png)](https://data-love.yueplush.com/img/img1.png))<br>
+![Core Web Vitals]([datalove/img2.webp](https://data-love.yueplush.com/img/img2.png))<br>
+![ALL Disabled Anti-crawler or bot]([datalove/img3.webp](https://data-love.yueplush.com/img/img3.png))<br>
+![Google PageSpeed Insights Score]([datalove/img4.webp](https://data-love.yueplush.com/img/img4.png))<br>
 <br>
 #▼thoughs or something#<br>
 just CLI websites, i just create for hobby but some reason,<br>
