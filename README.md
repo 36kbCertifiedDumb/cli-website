@@ -89,7 +89,7 @@ GOD Bless WebDev Community!
 ---
 
 ### ✅ Google PageSpeed Insights  
-[benchmark](https://pagespeed.web.dev/analysis/https-www-yueplush-com/xis728zpoi?form_factor=desktop)
+[benchmark](https://pagespeed.web.dev/analysis/https-www-uplinkoutlaw-com/rgauditl51?form_factor=mobile)
 
 ---
 
