@@ -7,7 +7,7 @@ This project uses the following Cloudflare products in addition to Cloudflare Pa
 - **Cloudflare Pages** — static hosting for the main smol website  
 - **Cloudflare Turnstile** — human verification protecting self-hosted backend (Immich / Owncast)  
 - **Cloudflare DNS** — domain and subdomain routing  
-- **Cloudflare Registrar (Domain)** — domain management for yueplush.com and subdomains  
+- **Cloudflare Registrar (Domain)** — domain management for www.uplinkoutlaw.com and subdomains  
 - **Cloudflare CDN / Cache** — global static content delivery  
 - **Cloudflare Zero Trust Access** — if enabled, used to protect internal endpoints  
 
@@ -138,7 +138,7 @@ I did not see the image of an engineer who had lost his job,
 but rather the image of an artist who had been freed from  
 all illusions and rediscovered the true essence of the web.
 
-**Fight for good, not evil — YuePlush**
+**Fight for good, not evil — 36kbCertifiedDumb**
 
 sign off.
 
