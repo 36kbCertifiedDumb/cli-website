@@ -1,5 +1,4 @@
 > 🧊 This repository is archived.<br>
-> Active development has moved to Private Repository<br>
 
 ## Cloudflare Products Used
 This project uses the following Cloudflare products in addition to Cloudflare Pages / Workers Assets:
