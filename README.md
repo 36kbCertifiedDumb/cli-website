@@ -94,11 +94,11 @@ for old schools 90s internet things commons sense.
 but if i do that on Modern Internet for this  
 something wrong or happend... i acutally so smol artist tbh...  
 i wonder why, should i eat something delicious? x.x)
-https://data-love-36kb.pages.dev/
-<img src="https://data-love-36kb.pages.dev/img/img2.png" width="350">
-<img src="https://data-love-36kb.pages.dev/img/img3.png" width="350">
-<img src="https://data-love-36kb.pages.dev/img/img4.png" width="350">
-
+<br>
+<img src="https://data-love-36kb.pages.dev/img/img2.png" width="350"><br>
+<img src="https://data-love-36kb.pages.dev/img/img3.png" width="350"><br>
+<img src="https://data-love-36kb.pages.dev/img/img4.png" width="350"><br>
+<br>
 ---
 
 ## Monologue
