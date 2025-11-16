@@ -82,8 +82,8 @@ GOD Bless WebDev Community!
 ---
 
 ### ✅ Google PageSpeed Insights 
-(i noticed, moved deploy domain to uplinkoutlaw.com with this source code,
-its just copy and paste, then this score 100 confirmed QED x.x)  
+(i noticed, moved deploy domain to uplinkoutlaw.com with this source code,<br>
+its just copy and paste, then this score 100 confirmed QED x.x)  <br>
 [benchmark](https://pagespeed.web.dev/analysis/https-www-uplinkoutlaw-com/rgauditl51?form_factor=mobile)
 
 ---
