@@ -23,13 +23,6 @@ This section is included to comply with the submission rules of Cloudflare’s W
 Don't worry, I have prepared a separate repository for updates.<br>
 [here the my personal smol websites](https://www.yueplush.com)
 
-▼ If You wish to feed something Coffee fee  
-i have Ko-fi account for this, feel free to feed the coffee,  
-i love caffein than alchool! ^x^ #DataLove  
-
-### ▼ Ko-fi
-[Feed the coffee for Dumb YuePlush](https://ko-fi.com/yueplush)
-
 ---
 
 ▼ my sites how to build up this  
