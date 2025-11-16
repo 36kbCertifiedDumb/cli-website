@@ -18,7 +18,7 @@ This section is included to comply with the submission rules of Cloudflare’s W
 ## ▼ This repository is fully archived for educational purposes.
    ▼ Technical demo and source code of 
      what happens when you make a website as lightweight as possible. 
-<img src="https://data-love.yueplush.com/img/img1.png" width="350"><br>
+<img src="https://data-love-36kbpages.dev/img/img1.png" width="350"><br>
 
 ---
 
@@ -94,10 +94,10 @@ for old schools 90s internet things commons sense.
 but if i do that on Modern Internet for this  
 something wrong or happend... i acutally so smol artist tbh...  
 i wonder why, should i eat something delicious? x.x)
-
-<img src="https://data-love.yueplush.com/img/img2.png" width="350">
-<img src="https://data-love.yueplush.com/img/img3.png" width="350">
-<img src="https://data-love.yueplush.com/img/img4.png" width="350">
+https://data-love-36kb.pages.dev/
+<img src="https://data-love-36kb.pages.dev/img/img2.png" width="350">
+<img src="https://data-love-36kb.pages.dev/img/img3.png" width="350">
+<img src="https://data-love-36kb.pages.dev/img/img4.png" width="350">
 
 ---
 
