@@ -6,7 +6,6 @@ This project uses the following Cloudflare products in addition to Cloudflare Pa
 - **Cloudflare Pages** — static hosting for the main smol website  
 - **Cloudflare Turnstile** — human verification protecting self-hosted backend (Immich / Owncast)  
 - **Cloudflare DNS** — domain and subdomain routing  
-- **Cloudflare Registrar (Domain)** — domain management for www.uplinkoutlaw.com and subdomains  
 - **Cloudflare CDN / Cache** — global static content delivery  
 - **Cloudflare Zero Trust Access** — if enabled, used to protect internal endpoints  
 
@@ -74,13 +73,6 @@ yeah, also you can do this.
 we should "hack the planet" once again.
 
 GOD Bless WebDev Community!
-
----
-
-### ✅ Google PageSpeed Insights 
-(i noticed, moved deploy domain to uplinkoutlaw.com with this source code,<br>
-its just copy and paste, then this score 100 confirmed QED x.x)  <br>
-[benchmark](https://pagespeed.web.dev/analysis/https-www-uplinkoutlaw-com/rgauditl51?form_factor=mobile)
 
 ---
 
